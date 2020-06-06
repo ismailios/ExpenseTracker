@@ -8,15 +8,17 @@ import TransactionList from "./components/TransactionList";
 import AddTransaction from "./components/AddTransaction";
 import IncomeExpense from "./components/IncomeExpense";
 
+import { GlobalProvider } from "./context/GlobalContext";
+
 function App() {
   return (
-    <div>
+    <GlobalProvider>
       <Header />
       <Balance />
       <IncomeExpense />
       <TransactionList />
       <AddTransaction />
-    </div>
+    </GlobalProvider>
   );
 }
 
